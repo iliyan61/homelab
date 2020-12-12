@@ -16,27 +16,27 @@ pingdict = {
 	3:["192.168.68.214","BrambleN0de2",1],
 	4:["192.168.68.216","BrambleN0de3",1],
 	5:["192.168.68.218","BrambleN0de4",1],
-	6:["192.168.68.aaa","Blank",1],
-	7:["192.168.68.aaa","Blank",1]
+	6:["pornhub.com","Pornhub",1],
+	7:["iliyan.dev","Website",1]
 			}
  
 while True:
 	for x in range(8):
 		# change the colour slightly whilst we are testing an IP address
 		if pingdict[x][2]==0:
-			set_pixel(x, 0, 150, 0)
+			set_pixel(x, 100, 0, 255)
 		else:
-			set_pixel(x, 255, 0, 0)
+			set_pixel(x, 100, 0, 255)
  
 		show()
 		# ping the IP address 
 		response = os.system("ping -c 1 -W 2 " + pingdict[x][0]+ " >nul")
 		if response == 0:
-			set_pixel(x, 0, 100, 0)
+			set_pixel(x, 0, 10, 0)
 			print pingdict[x][1], ' is up'
 			pingdict[x][2]=0
 		else:
-			set_pixel(x, 150, 0, 0)
+			set_pixel(x, 10, 0, 0)
 			print pingdict[x][1], ' is down'
 			pingdict[x][2]=1
 		show()
