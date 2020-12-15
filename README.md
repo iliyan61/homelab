@@ -87,8 +87,8 @@ shove pibackup.sh in /usr/local/bin
 
 
 # Mount SMB 
-```
 [guide](https://www.raspberrypi.org/documentation/remote-access/samba.md)
 
+```
 sudo mount.cifs //<hostname or IP address>/share /home/pi/windowshare -o user=<name>
 ```
