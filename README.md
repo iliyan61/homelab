@@ -2,18 +2,21 @@
 Project timeline and such for my PI cluster server
 
 # SCP
-`scp pi@192.168.68.212:/home/pi/test.txt /Users/iliyanjivraj/`
+```
+	scp pi@192.168.68.212:/home/pi/test.txt /Users/iliyanjivraj/
+```
 
 
 # SSH
-
-	`Check for existing keys: ls ~/.ssh
+```
+	Check for existing keys: ls ~/.ssh
 	
 	Generate new keys: ssh-keygen
 
 	Move key to remote machine: ssh-copy-id <USERNAME>@<IP-ADDRESS>
 
-	Erase from known hosts: ssh-keygen -R <USERNAME>@<IP-ADDRESS>`
+	Erase from known hosts: ssh-keygen -R <USERNAME>@<IP-ADDRESS>
+```
 
 
 # VNC FIX
