@@ -24,9 +24,9 @@ while True:
 	for x in range(8):
 		# change the colour slightly whilst we are testing an IP address
 		if pingdict[x][2]==0:
-			set_pixel(x, 100, 0, 255)
+			set_pixel(x, 0, 0, 10)
 		else:
-			set_pixel(x, 100, 0, 255)
+			set_pixel(x, 0, 0, 10)
  
 		show()
 		# ping the IP address 

@@ -1,5 +1,5 @@
 # homelab
-Project timeline and such for my PI server 
+Project timeline and such for my PI cluster server 
 
 # SCP
 scp pi@192.168.68.212:/home/pi/test.txt /Users/iliyanjivraj/
@@ -53,3 +53,26 @@ interface eth0
 static ip_address=192.168.68
 static routers=192.168.68.1
 static domain_name_servers=192.168.68.1
+
+
+# PSSH
+pssh -h pssh_hosts -l pi -i -t 1 -v 
+	sudo apt-get -y upgrade
+	uptime
+
+
+
+# Backups
+
+sudo mkdir /media/backup
+
+sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/BrambleX /media/backup -o user=pi
+
+shove pibackup.sh in /usr/local/bin
+
+
+# Mount SMB 
+https://www.raspberrypi.org/documentation/remote-access/samba.md
+
+sudo mount.cifs //<hostname or IP address>/share /home/pi/windowshare -o user=<name>
+
