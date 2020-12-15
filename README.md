@@ -20,63 +20,75 @@ Project timeline and such for my PI cluster server
 
 
 # VNC FIX
+```
 	All on pi:
-		`sudo raspi-config`
+		sudo raspi-config
 
-		`sudo vncpasswd -service`
+		sudo vncpasswd -service
 
-		`sudo nano /etc/vnc/config.d/common.custom
-			Put this in that: Authentication=VncAuth`
+		sudo nano /etc/vnc/config.d/common.custom
+			Put this in that: Authentication=VncAuth
 
-		`sudo systemctl restart vncserver-x11-serviced`
+		sudo systemctl restart vncserver-x11-serviced
+```
 
 
 # Setting up headless PI's
-
+```
 	Config.txt
-		Put this in that: `dtoverlay=dwc2`
+		Put this in that: dtoverlay=dwc2
 
-	`touch ssh`
+	touch ssh
 
 	cmdline.txt
 
-		`console=serial0,115200 console=tty1 root=PARTUUID=##PUTUUIDHERE##-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet init=/usr/lib/raspi-config/init_resize.sh`
+		console=serial0,115200 console=tty1 root=PARTUUID=##PUTUUIDHERE##-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet init=/usr/lib/raspi-config/init_resize.sh
+```
+
 
 # RNDIS fix
-	`sudo nano /etc/modprobe.d/rndis.conf`
-		`options g_ether host_addr=**RANDOM MAC HERE** dev_addr=**MAC OF HOST MACHINE**`
+```
+	sudo nano /etc/modprobe.d/rndis.conf
+		options g_ether host_addr=**RANDOM MAC HERE** dev_addr=**MAC OF HOST MACHINE**
+```
 
 
 # Give the Pi's WiFi back
-`sudo rfkill unblock wifi`
-
+```
+sudo rfkill unblock wifi
+```
 
 
 # Sudo nano /etc/dhcpcd.conf
-`interface eth0
+```
+interface eth0
 static ip_address=192.168.68
 static routers=192.168.68.1
-static domain_name_servers=192.168.68.1`
+static domain_name_servers=192.168.68.1
+```
 
 
 # PSSH
-`pssh -h pssh_hosts -l pi -i -t 1 -v 
+```
+pssh -h pssh_hosts -l pi -i -t 1 -v 
 	sudo apt-get -y upgrade
-	uptime`
-
+	uptime
+```
 
 
 # Backups
+```
+sudo mkdir /media/backup
 
-`sudo mkdir /media/backup`
+sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/BrambleX /media/backup -o user=pi
 
-`sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/BrambleX /media/backup -o user=pi`
-
-`shove pibackup.sh in /usr/local/bin`
+shove pibackup.sh in /usr/local/bin
+```
 
 
 # Mount SMB 
+```
 [guide](https://www.raspberrypi.org/documentation/remote-access/samba.md)
 
-`sudo mount.cifs //<hostname or IP address>/share /home/pi/windowshare -o user=<name>`
-
+sudo mount.cifs //<hostname or IP address>/share /home/pi/windowshare -o user=<name>
+```
