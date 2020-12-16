@@ -2,6 +2,7 @@
 
 
 # You Should Not Need To Edit Past This Line #
+sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/Bramble4 /media/backup -o user=pi,password=ilijiv787
 hname=`hostname`
 BackupDir=/media/backup
 
@@ -22,4 +23,7 @@ echo "Starting Backup"
 dd if=/dev/mmcblk0 of=${BackupDir}/$(date +%Y-%m-%d).img bs=1M status=progress
 echo "Backup Complete"
 
-umount /media/backup
+source /usr/local/bin/pishrink.sh ${BackupDir}/$(date +%Y-%m-%d).img
+
+echo "PiShrink complete"
+
