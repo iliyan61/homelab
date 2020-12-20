@@ -1,5 +1,5 @@
 # homelab
-Project timeline and such for my PI cluster server
+A repo of all the stuff I need for my Pi Cluster server.
 
 # SCP
 ```

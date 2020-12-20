@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/TestPi /media/backup -o user=pi,password=ilijiv787
+sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/TestPi /media/backup -o user=pi,password=###
 hname=`hostname`
 BackupDir=/media/backup
 

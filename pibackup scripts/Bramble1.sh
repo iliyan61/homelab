@@ -2,7 +2,7 @@
 
 
 # You Should Not Need To Edit Past This Line #
-sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/Bramble1 /media/backup -o user=pi,password=ilijiv787
+sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/Bramble1 /media/backup -o user=pi,password=###
 hname=`hostname`
 BackupDir=/media/backup
 
