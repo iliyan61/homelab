@@ -82,7 +82,9 @@ sudo mkdir /media/backup
 
 sudo mount.cifs //Iliyans-Cheese-Grater-Mac-Pro.local/BrambleX /media/backup -o user=pi
 
-shove pibackup.sh in /usr/local/bin
+sudo nano /usr/local/bin/pibackup.sh
+
+Use this to make it an executable sudo chmod +x /usr/local/bin/pibackup.sh 
 ```
 
 
