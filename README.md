@@ -97,3 +97,13 @@ Use this to make it an executable sudo chmod +x /usr/local/bin/pibackup.sh
 ```
 sudo mount.cifs //<hostname or IP address>/share /home/pi/windowshare -o user=<name>
 ```
+
+
+# Print CPU temp on prompt
+
+get_cpu_temp() {
+  cpuTemp=$( /opt/vc/bin/vcgencmd measure_temp | sed "s/[^0-9.]//g" )
+  echo "[$cpuTemp]"
+}
+old_PS1=$PS1
+PROMPT_COMMAND='PS1="$(get_cpu_temp) $old_PS1"'
