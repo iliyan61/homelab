@@ -3,53 +3,52 @@ A repo of all the stuff I need for my Pi Cluster server.
 
 # SCP
 ```
-	scp pi@192.168.68.212:/home/pi/test.txt /Users/iliyanjivraj/
+scp pi@192.168.68.212:/home/pi/test.txt /Users/iliyanjivraj/
 ```
 
 
 # SSH
 ```
-	Check for existing keys: ls ~/.ssh
+Check for existing keys: ls ~/.ssh
 	
-	Generate new keys: ssh-keygen
+Generate new keys: ssh-keygen
 
-	Move key to remote machine: ssh-copy-id <USERNAME>@<IP-ADDRESS>
+Move key to remote machine: ssh-copy-id <USERNAME>@<IP-ADDRESS>
 
-	Erase from known hosts: ssh-keygen -R <USERNAME>@<IP-ADDRESS>
+Erase from known hosts: ssh-keygen -R <USERNAME>@<IP-ADDRESS>
 ```
 
 
 # VNC FIX
 ```
-	All on pi:
-		sudo raspi-config
+sudo raspi-config
 
-		sudo vncpasswd -service
+sudo vncpasswd -service
 
-		sudo nano /etc/vnc/config.d/common.custom
-			Put this in that: Authentication=VncAuth
+sudo nano /etc/vnc/config.d/common.custom
+	Put this in that: Authentication=VncAuth
 
-		sudo systemctl restart vncserver-x11-serviced
+sudo systemctl restart vncserver-x11-serviced
 ```
 
 
 # Setting up headless PI's
 ```
-	Config.txt
-		Put this in that: dtoverlay=dwc2
+Config.txt
+	Put this in that: dtoverlay=dwc2
 
-	touch ssh
+touch ssh
 
-	cmdline.txt
+cmdline.txt
 
-		console=serial0,115200 console=tty1 root=PARTUUID=##PUTUUIDHERE##-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet init=/usr/lib/raspi-config/init_resize.sh
+	console=serial0,115200 console=tty1 root=PARTUUID=##PUTUUIDHERE##-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet init=/usr/lib/raspi-config/init_resize.sh
 ```
 
 
 # RNDIS fix
 ```
-	sudo nano /etc/modprobe.d/rndis.conf
-		options g_ether host_addr=**RANDOM MAC HERE** dev_addr=**MAC OF HOST MACHINE**
+sudo nano /etc/modprobe.d/rndis.conf
+	options g_ether host_addr=**RANDOM MAC HERE** dev_addr=**MAC OF HOST MACHINE**
 ```
 
 
