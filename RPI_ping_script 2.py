@@ -10,14 +10,14 @@ show()
  
 # dictionary data format is - "IP", "description", status where 0 = up and 1 = down
 pingdict = {
-	0:["TestPi.local","TestPI",1],
-	1:["BrambleN0de1.local","BrambleN0de1",1],
-	2:["BrambleN0de2.local","BrambleN0de2",1],
-	3:["BrambleN0de3.local","BrambleN0de3",1],
-	4:["BrambleN0de4.local","BrambleN0de4",1],
-	5:["BrambleN0de5.local","BrambleN0de5",1],
-	6:["Windows-Server.local","Windows-Server",1],
-	7:["GamingPC.local","GamingPC",1]
+	0:["iliyans-cheese-grater-mac-pro.local","Mac Pro",1],
+	1:["iliyan.pulseway.com","Pulseway",1],
+	2:["iliyan.dev","Website",1],
+	3:["pornhub.com","pornhub",1],
+	4:["redtube.com","redtube",1],
+	5:["onlyfans.com","onlyfans",1],
+	6:["xhamster.com","xhamster",1],
+	7:["8.8.8.8","Google DNS",1]
 			}
  
 while True:
