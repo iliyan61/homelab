@@ -27,13 +27,16 @@ while True:
 			set_pixel(x, 0, 0, 10)
 		else:
 			set_pixel(x, 0, 0, 10)
- 
+ 		
+		print("")
+ 		print("Ping?")
+
 		show()
 		# ping the IP address 
 		response = os.system("ping -c 1 -W 2 " + pingdict[x][0]+ " >nul")
 		if response == 0:
 			set_pixel(x, 0, 10, 0)
-			print pingdict[x][1], ' is up'
+			print 'pong', pingdict[x][1], ' is up'
 			pingdict[x][2]=0
 		else:
 			set_pixel(x, 10, 0, 0)
@@ -43,6 +46,7 @@ while True:
  
 	  # pause for a few seconds then loop again
 	time.sleep(2)
+	
 	print("")
 	print("")
 	print("")
