@@ -13,10 +13,10 @@ pingdict = {
 	0:["iliyans-cheese-grater-mac-pro.local","Mac Pro",1],
 	1:["iliyan.pulseway.com","Pulseway",1],
 	2:["iliyan.dev","Website",1],
-	3:["pornhub.com","pornhub",1],
-	4:["redtube.com","redtube",1],
-	5:["onlyfans.com","onlyfans",1],
-	6:["xhamster.com","xhamster",1],
+	3:["8.8.8.8","Google DNS",1],
+	4:["github.com","Github",1],
+	5:["discord.gg","Discord",1],
+	6:["8.8.8.8","Google DNS",1],
 	7:["8.8.8.8","Google DNS",1]
 			}
  
