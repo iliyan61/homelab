@@ -17,7 +17,7 @@ pingdict = {
 	4:["BrambleN0de4.local","BrambleN0de4",1],
 	5:["BrambleN0de5.local","BrambleN0de5",1],
 	6:["Windows-Server.local","Windows-Server",1],
-	7:["GamingPC.local","GamingPC",1]
+	7:["Truenas.local","TrueNas",1]
 			}
  
 while True:

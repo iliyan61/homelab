@@ -11,12 +11,12 @@ show()
 # dictionary data format is - "IP", "description", status where 0 = up and 1 = down
 pingdict = {
 	0:["iliyans-cheese-grater-mac-pro.local","Mac Pro",1],
-	1:["iliyan.pulseway.com","Pulseway",1],
+	1:["GamingPC,local","Gaming PC",1],
 	2:["iliyan.dev","Website",1],
-	3:["8.8.8.8","Google DNS",1],
+	3:["iliyan.dev","Google DNS",1],
 	4:["github.com","Github",1],
 	5:["discord.gg","Discord",1],
-	6:["8.8.8.8","Google DNS",1],
+	6:["pornhub.com","Pornhub",1],
 	7:["8.8.8.8","Google DNS",1]
 			}
  
