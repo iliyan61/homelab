@@ -109,3 +109,17 @@ get_cpu_temp() {
 old_PS1=$PS1
 PROMPT_COMMAND='PS1="$(get_cpu_temp) $old_PS1"'
 ```
+
+
+
+get_cpu_temp() {
+  cpuTemp=$( /usr/bin/vcgencmd measure_temp | sed "s/[^0-9.]//g" )
+  echo "[$cpuTemp]"
+}
+old_PS1=$PS1
+PROMPT_COMMAND='PS1="$(get_cpu_temp) $old_PS1"'
+
+
+
+
+sudo apt update -y && sudo apt upgrade -y
