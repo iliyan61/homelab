@@ -123,3 +123,6 @@ PROMPT_COMMAND='PS1="$(get_cpu_temp) $old_PS1"'
 
 
 sudo apt update -y && sudo apt upgrade -y
+
+ZFS Rebuild:
+https://jordanelver.co.uk/blog/2018/11/26/how-to-replace-a-failed-disk-in-a-zfs-mirror/
