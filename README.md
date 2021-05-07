@@ -126,3 +126,6 @@ sudo apt update -y && sudo apt upgrade -y
 
 ZFS Rebuild:
 https://jordanelver.co.uk/blog/2018/11/26/how-to-replace-a-failed-disk-in-a-zfs-mirror/
+
+
+http://www.d3noob.org/2020/02/installing-nodeexporter-for-monitoring.html
