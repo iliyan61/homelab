@@ -3,16 +3,53 @@ Grafana+Prometheus+Node_exporter HowTO
 Pi Server:
 http://www.d3noob.org/2020/02/installing-prometheus-and-grafana-on.html
 
-sudo apt install iptables-persistent
-sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 3000
-iptables-save > /etc/iptables/rules.v4
-sudo iptables-save > /etc/iptables/rules.v4
-sudo nano
-sudo nano /etc/iptables/rules.v4
-iptables-save > /etc/iptables/rules.v4
-sudo iptables-save > /etc/iptables/rules.v4
-sudo iptables-save
-iptables -t nat -L
+`sudo apt-get update -y && sudo apt-get upgrade`
+
+`wget: **NEWEST ONE FROM HERE: https://prometheus.io/download/**`
+`tar xfz prometheus**WHATEVER VERSION**`
+`rm prometheus**WHATEVER VERSION**`
+`mv prometheus**WHATEVER VERSION** prometheus/`
+`sudo nano /etc/systemd/system/prometheus.service`
+
+Put this in that:
+    [Unit]
+    Description=Prometheus Server
+    Documentation=https://prometheus.io/docs/introduction/overview/
+    After=network-online.target
+
+    [Service]
+    User=pi
+    Restart=on-failure
+
+    #Change this line if Prometheus is somewhere different
+    ExecStart=/home/pi/prometheus/prometheus \
+    --config.file=/home/pi/prometheus/prometheus.yml \
+    --storage.tsdb.path=/home/pi/prometheus/data
+
+
+
+[Install]
+WantedBy=multi-user.target
+
+`sudo systemctl daemon-reload`
+`sudo systemctl start prometheus`
+`sudo systemctl status prometheus`
+`sudo systemctl enable prometheus`
+
+
+
+
+EzPz DNS stuff:
+    sudo apt install iptables-persistent
+    sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 3000
+    iptables-save > /etc/iptables/rules.v4
+    sudo iptables-save > /etc/iptables/rules.v4
+    sudo nano
+    sudo nano /etc/iptables/rules.v4
+    iptables-save > /etc/iptables/rules.v4
+    sudo iptables-save > /etc/iptables/rules.v4
+    sudo iptables-save
+    iptables -t nat -L
 
 
 Ubuntu:
