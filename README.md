@@ -129,3 +129,54 @@ https://jordanelver.co.uk/blog/2018/11/26/how-to-replace-a-failed-disk-in-a-zfs-
 
 
 http://www.d3noob.org/2020/02/installing-nodeexporter-for-monitoring.html
+
+
+Grafana commmands:
+
+sudo nano /home/pi/prometheus/prometheus.yml
+sudo systemctl restart prometheus
+
+
+Python Service shit
+
+
+Blinkt 1
+
+sudo nano /etc/systemd/system/blinkt.service
+[Unit]                                                                                                                       
+# Human readable name of the unit                                                                                    
+Description=Blinkt Script
+
+[Service]
+# Command to execute when the service is started
+ExecStart=/usr/bin/python /home/pi/RPI_ping_script.py
+
+
+
+systemctl daemon-reload
+sudo systemctl start blinkt.service
+sudo systemctl status blinkt.service
+
+
+
+
+
+
+
+
+Blinkt 2
+
+sudo nano /etc/systemd/system/blinkt.service
+[Unit]                                                                                                                       
+# Human readable name of the unit                                                                                    
+Description=Blinkt Script
+
+[Service]
+# Command to execute when the service is started
+ExecStart=/usr/bin/python /home/pi/RPI_ping_script2.py
+
+
+
+systemctl daemon-reload
+sudo systemctl start blinkt.service
+sudo systemctl status blinkt.service
