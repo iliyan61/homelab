@@ -14,7 +14,7 @@ pingdict = {
 	1:["pivpn.local","PiVPN",1],
 	2:["dns.local","DNS",1],
 	3:["nas.local","NAS",1],
-	4:["esxi.local","ESXi Host",1],
+	4:["192.168.68.210","ESXi Host",1],
 	5:["192.168.68.211","vCenter",1],
 	6:["mc-server.local","MC-Server",1],
 	7:["gaymer.local","PC",1]
