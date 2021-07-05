@@ -1,0 +1,38 @@
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh smartphonemodmail@65.21.158.112 "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh root@65.21.158.112 "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh grafana@65.21.158.112 "cat >> .ssh/authorized_keys"
+
+
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh pi@192.168.68.202 "cat >> .ssh/authorized_keys"
+
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh pi@192.168.68.203 "cat >> .ssh/authorized_keys"
+
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh pi@192.168.68.204 "cat >> .ssh/authorized_keys"
+
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh iliyan-jivraj@192.168.68.209 "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh linux-server@192.168.68.209 "cat >> .ssh/authorized_keys"
+
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh pivpn@95.217.155.187 "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh root@95.217.155.187 "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh grafana@95.217.155.187 "cat >> .ssh/authorized_keys"
+
+
+
+
+
+    Create the .ssh directory:
+
+    mkdir ~/.ssh
+
+    Set the right permissions:
+
+    chmod 700 ~/.ssh
+
+    Create the authorized_keys file:
+
+    touch ~/.ssh/authorized_keys
+
+    Set the right permissions:
+
+    chmod 600 ~/.ssh/authorized_keys
+
