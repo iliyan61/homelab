@@ -1,0 +1,12 @@
+SSH
+
+# SSH
+```
+Check for existing keys: ls ~/.ssh
+	
+Generate new keys: ssh-keygen
+
+Move key to remote machine: ssh-copy-id <USERNAME>@<IP-ADDRESS>
+
+Erase from known hosts: ssh-keygen -R <USERNAME>@<IP-ADDRESS>
+```

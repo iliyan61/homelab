@@ -23,3 +23,15 @@ https://rm-rf.id/install-node-exporter-for-prometheus-grafana-on-ubuntu-20-04/
 
 Pi:
 http://www.d3noob.org/2020/02/installing-nodeexporter-for-monitoring.html
+
+
+
+
+
+
+Grafana commmands:
+
+sudo nano /home/pi/prometheus/prometheus.yml
+sudo systemctl restart prometheus
+
+

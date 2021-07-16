@@ -1,0 +1,7 @@
+SCP
+
+
+# SCP
+```
+scp pi@192.168.68.2XX:/home/pi/test.txt /Users/iliyanjivraj/
+```
